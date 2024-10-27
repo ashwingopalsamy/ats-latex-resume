@@ -11,7 +11,6 @@ This LaTeX resume template is designed specifically to meet the demands of moder
 * [How the Chosen Packages Address Common Resume Pitfalls](#how-the-chosen-packages-address-common-resume-pitfalls)
 * [Quick Start](#quick-start)
 * [Overleaf Instructions](#overleaf-instructions)
-* [Best Practices for ATS Optimization](#best-practices-for-ats-optimization)
 * [Customization Tips](#customization-tips)
 * [Testing and Validation](#testing-and-validation)
 * [Contributing](#contributing)
