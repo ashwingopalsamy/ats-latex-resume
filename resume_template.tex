@@ -1,0 +1,227 @@
+%-------------------------
+% Resume in Latex
+% Author : Ashwin Gopalsamy
+%------------------------
+
+\documentclass[letterpaper,12pt]{article} % Standard document class for a resume
+
+% Set margins for the document
+\usepackage[
+    left=0.3in,
+    right=0.3in,
+    top=0.3in,
+    bottom=0.3in,
+]{geometry}
+
+% UTF-8 encoding for better character support, should be loaded before csquotes
+\usepackage[utf8]{inputenc}
+
+% Essential packages for formatting
+\usepackage{latexsym} % Provides symbols
+\usepackage{titlesec} % Customize title format for sections
+\usepackage{marvosym} % Additional symbols
+\usepackage[usenames,dvipsnames]{color} % Color support
+\usepackage{verbatim} % For multiline comments
+\usepackage{enumitem} % Better control over lists
+\usepackage[hidelinks]{hyperref} % For hyperlinks, with hidden link borders
+\usepackage{fancyhdr} % Custom headers and footers
+\usepackage[english]{babel} % Language support
+\usepackage{tabularx} % Table support
+\usepackage{hyphenat} % Hyphenation support
+\usepackage{fontawesome} % Font Awesome icons
+\input{glyphtounicode} % Unicode support for better PDF text extraction
+\usepackage{parskip} % Adjusts paragraph spacing
+\usepackage{etoolbox}  % Conditional logic
+\usepackage{csquotes} % Improved quotation handling, loaded after inputenc
+
+% FONT CONFIGURATION
+\usepackage{charter} % Custom font choice
+
+% Toggle for version control, if needed
+\newtoggle{is_long_version}
+\settoggle{is_long_version}{false}
+
+% Page style settings
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\fancyfoot{} % No footer
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+\renewcommand{\footrulewidth}{0pt} % Remove footer rule
+
+% URL formatting
+\urlstyle{same} % URL style matches surrounding text
+
+% Spacing settings
+\raggedbottom % Do not add extra vertical space between paragraphs
+\raggedright % Left align all text
+\setlength{\tabcolsep}{0in} % Table column spacing
+
+% Section heading formatting
+\titleformat{\section}{
+  \bfseries\raggedright\small
+}{}{0em}{}[\color{black}\titlerule] % Section title underline
+
+\pdfgentounicode=1 % Ensure Unicode mapping for better text extraction
+
+%%% Set spacing for section titles
+\titlespacing*{\section}
+{0pt} % Left indent
+{4pt} % Spacing above
+{4pt} % Spacing below
+
+\linespread{1.00} % Line spacing
+\setlength{\parskip}{0pt} % No extra space between paragraphs
+
+% List configuration
+\setlist[itemize]{itemsep=0pt} % No extra space between items
+\def\vspaceAfterBullets{3.0pt} % Vertical space after lists
+\def\bulletIndent{15pt} % Indentation for bullet lists
+
+% Custom bullet symbols, recommended to keep simple for ATS
+\setlist[itemize,1]{label=$\bullet$} 
+\setlist[itemize,2]{label=$\bullet$}
+\setlist[itemize,3]{label=$\circ$}
+
+% Custom commands for consistent formatting
+\newcommand{\bulletItem}[1]{ % Custom bullet item format
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\companyNameAndLocationHeading}[2]{ % Format for company name and location
+  \item 
+    \begin{tabular*}{1.0\textwidth}[b]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+    \end{tabular*}
+}
+
+\newcommand{\companyTitleAndDateHeading}[4]{ % Format for job title and dates
+    \item
+    \textbf{#1, #2} \hfill #3 - #4
+}
+
+\newcommand{\resumeProjectHeading}[2]{ % Format for project heading
+    \item
+    \begin{tabular*}{1.0\textwidth}[b]{l@{\extracolsep{\fill}}r}
+      \small#1 & #2
+    \end{tabular*}
+}
+
+% Commands for itemize environments
+\newcommand{\sectionListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\sectionListEnd}{\end{itemize}}
+
+\newcommand{\outerBulletListStart}{\begin{itemize}[leftmargin=\bulletIndent]}
+\newcommand{\outerBulletListEnd}{\end{itemize}\vspace{\vspaceAfterBullets}}
+
+\newcommand{\innerBulletListStart}{\begin{itemize}[leftmargin=\bulletIndent]}
+\newcommand{\innerBulletListEnd}{\end{itemize}}
+
+\newcommand{\titleAndDateHeading}[2]{ % Format for education or certification dates
+    \item
+    \begin{tabular*}{1.0\textwidth}[b]{l@{\extracolsep{\fill}}r}
+      {\bfseries\itshape\small #1} & \itshape\small #2
+    \end{tabular*}
+}
+
+% Hyperlink command, keep color simple for ATS
+\newcommand{\bref}[2]{\href{#1}{\color{blue}{#2}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%
+\begin{document}
+
+%---------- HEADING ----------
+\def\spaceAfterLogo{0.2pt} % Space after logo symbol, if used
+%---------- Contact Information ----------
+\begin{center}
+  \textbf{\Large Ashwin Gopalsamy} \\ \vspace{3pt}
+  \small
+  +91 8637498921 \textbar{} ashwin2125@gmail.com \textbar{} \href{https://linkedin.com/in/ashwingopalsamy}{linkedin.com/in/ashwingopalsamy} \textbar{} Remote
+\end{center}
+
+%----------- SUMMARY -----------
+\section*{\makebox[\textwidth][c]{\textbf{SUMMARY}}}
+\small Growth-stage engineer, blogger and open-source contributor with over 3 years of experience in \textbf{distributed systems}, \textbf{cloud-native architecture} and \textbf{back-end development}. Specializing in designing and delivering scalable, resilient solutions for data intensive applications, I bring expertise in \textbf{Go, AWS, Kubernetes, Terraform}, and \textbf{Microservices}. Proficient in \textbf{system design} and \textbf{product development}, with a track record of building impactful financial products. Skilled at collaborating with cross-functional teams to achieve meaningful results and elevate engineering practices.
+
+%----------- EXPERIENCE -----------
+\section*{\makebox[\textwidth][c]{\textbf{EXPERIENCE}}}
+\sectionListStart
+
+\companyTitleAndDateHeading
+{Software Engineer}{Solaris SE.}{June 2022 \textbf{-} Present}{Remote.}
+\outerBulletListStart
+\bulletItem{Engineered the complete life-cycle of '\underline{Credit Card Interest}' product, from design to post-release, collaborating with internal teams and product owners, generating substantial revenue over \textbf{EUR 30M annually}.}
+\bulletItem{Owning '\href{https://www.solarisgroup.com/en/services/accounts/}{\underline{Accounts Domain}}', with AWS, Kubernetes, Terraform stack that support over \textbf{20M transactions per day}.} 
+\bulletItem{Engineering 100\% cloud-native, event-sourced micro-services in \href{https://www.solarisgroup.com/blog/solarisbank-core-banking-beginning-of-a-journey/}{\underline{Core-Banking system}}, achieving \textbf{99.999\% uptime}.}
+\bulletItem{Pioneering end-to-end development of '\href{https://docs.solarisgroup.com/guides/digital-banking/savings-accounts/}{\underline{Savings Account}}' product, driving \textbf{significant revenue growth}.}
+\bulletItem{Contributing to \underline{on-call rotations, observability}, enhancing run-books that improved the \textbf{incident response times}.}
+\outerBulletListEnd
+
+\companyTitleAndDateHeading
+{Associate Software Engineer}{Hexaware Technologies.}{June 2021 \textbf{-} June 2022}{Remote.}
+\outerBulletListStart
+\bulletItem{Contributed to the development of enterprise-level distributed applications, implementing solutions that improved system performance.}
+\bulletItem{Worked on deploying a Cloud HRMS product for a major automotive client, ensuring seamless operation and user experience for over 75K employees within a system valued at USD 1.5B.}
+
+
+\outerBulletListEnd
+
+\companyTitleAndDateHeading
+{Intern}{Microsoft.}{4 months}{Remote.}
+\outerBulletListStart
+\bulletItem{Developed features for an open-source project, 'Bud.ai - Student Twin' using Microsoft Azure Cloud and GitHub as part of the 'Future Ready Talent' program, enhancing the project's reach and adoption.}
+\bulletItem{Enhanced the project documentation and on-boarding materials, making it easier for future contributors to get started and contributed effectively with project timelines met ahead of schedule.}
+\outerBulletListEnd
+
+\sectionListEnd
+
+%----------- SKILLS -----------
+\section*{\makebox[\textwidth][c]{\textbf{SKILLS}}}
+\begin{itemize}[leftmargin=0.15in]
+    \item \textbf{Languages:} Advanced in \textbf{Go (Golang)}, Familiar with \textbf{Python}, \textbf{Javascript}.
+    \item \textbf{Cloud \& DevOps:} Proficient with \textbf{AWS}, \textbf{Kubernetes}, \textbf{Terraform}, \textbf{Docker}, \textbf{Grafana}, \textbf{Prometheus}, \textbf{Concourse CI/CD}.
+    \item \textbf{System Design \& Architecture:} Skilled in \textbf{Microservices}, \textbf{Event-Sourced Architecture}, \textbf{Distributed Systems}.
+    \item \textbf{Databases:} Extensive experience with \textbf{PostgreSQL}, \textbf{MariaDB}, \textbf{DynamoDB}, \textbf{Athena}.
+    \item \textbf{Tools \& Frameworks:} Knowledgeable in \textbf{REST}, \textbf{gRPC}, \textbf{Jira}, \textbf{Confluence}.
+\end{itemize}
+
+
+%----------- EDUCATION -----------
+\section*{\makebox[\textwidth][c]{\textbf{EDUCATION}}}
+\sectionListStart
+
+\companyNameAndLocationHeading{Hindusthan College of Engineering and Technology (Anna University).}{\textit{August 2017 \textbf{-} May 2021.}}
+\titleAndDateHeading{Bachelor of Technology in Information Technology.}{\textbf{CGPA: 8.3/10.0}}
+\outerBulletListStart
+\bulletItem{Achieved \#1 Ranking in Skillrack Coding Competitions for 10 consecutive weeks (C++, Java, Python).}
+\bulletItem{Reinvigorated the Google Developer Student Club \& HiCET Developer Club, leading multiple initiatives.}
+\outerBulletListEnd
+
+\sectionListEnd
+
+%----------- RESEARCH PUBLICATIONS -----------
+\section*{\makebox[\textwidth][c]{\textbf{RESEARCH PUBLICATION}}}
+\sectionListStart
+
+\resumeProjectHeading
+{\textbf{Intelligent Traffic Management System using Machine Learning} $|$ \emph{\href{https://link.springer.com/chapter/10.1007/978-981-19-2177-3_12}{Published in \underline{Springer}}}}{}
+
+\sectionListEnd
+
+
+%----------- CERTIFICATIONS -----------
+\section*{\makebox[\textwidth][c]{\textbf{CERTIFICATIONS}}}
+\sectionListStart
+
+\resumeProjectHeading
+{\textbf{AWS Certified: Solutions Architect Associate} $|$ \emph{\href{https://www.credly.com/badges/e0f645c6-d2a4-49a2-a78e-6ae7c88df96f/public_url}{\underline{Amazon Web Services}}}}{}
+\resumeProjectHeading
+{\textbf{AWS Certified: Cloud Practitioner} $|$ \emph{\href{https://www.credly.com/badges/46d31e46-d3ae-4c38-b1c3-b1d0331815c1/public_url}{\underline{Amazon Web Services}}}}{}
+\resumeProjectHeading
+{\textbf{Microsoft Azure Cloud: 3x Certified} $|$ \emph{\href{https://www.credly.com/users/ashwin}{\underline{Microsoft Azure}}}}{}
+
+\sectionListEnd
+
+\end{document}
