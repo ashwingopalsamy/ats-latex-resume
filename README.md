@@ -2,10 +2,28 @@
 
 This LaTeX resume template is designed specifically to meet the demands of modern Applicant Tracking Systems (ATS) while still looking professional and clean for human reviewers. Unlike other templates that might overlook crucial technical details, this template includes specific enhancements that make a real difference in getting your resume through ATS parsing and into the hands of hiring managers.
 
+## Table of Contents
+
+* [What Makes This Template Different?](#what-makes-this-template-different)
+   + [1. Optimized for ATS Parsing](#1-optimized-for-ats-parsing)
+   + [2. Carefully Chosen LaTeX Packages](#2-carefully-chosen-latex-packages)
+   + [3. Designed for Real-World Use](#3-designed-for-real-world-use)
+* [How the Chosen Packages Address Common Resume Pitfalls](#how-the-chosen-packages-address-common-resume-pitfalls)
+* [Quick Start](#quick-start)
+* [Overleaf Instructions](#overleaf-instructions)
+* [Best Practices for ATS Optimization](#best-practices-for-ats-optimization)
+* [Customization Tips](#customization-tips)
+* [Testing and Validation](#testing-and-validation)
+* [Contributing](#contributing)
+* [License](#license)
+* [About This Template](#about-this-template)
+
 ## What Makes This Template Different?
 
 ### 1. Optimized for ATS Parsing
+
 While many LaTeX templates focus on aesthetics, this template is engineered to work well with ATS software by:
+
 - **Ensuring Compatibility with UTF-8 Encoding:** Text is readable and searchable, avoiding common issues with ATS systems misreading special characters.
 - **Using Standard Fonts and Layouts:** The template employs fonts like `lmodern`, `charter`, `helv` that are both visually appealing and ATS-friendly.
 - **Enhancing Text Extraction from PDFs:** Specialized packages ensure the content in the PDF can be extracted accurately, allowing all the important details to be parsed correctly.
@@ -26,7 +44,9 @@ The following packages have been selected to address common problems that can pr
 - **`glyphtounicode`** – Enhances Unicode mapping to ensure consistent text extraction from the PDF. This is especially useful for ATS systems that extract keywords and phrases for ranking.
 
 ### 3. Designed for Real-World Use
+
 This template goes beyond aesthetics to ensure that:
+
 - **Your content is not just beautifully formatted but also indexed correctly by ATS.** Poor encoding can prevent keywords and achievements from being picked up.
 - **Standardized formatting avoids pitfalls common with over-designed templates** (e.g., using images or unusual symbols that confuse parsing software).
 - **Modular layout supports easy adjustments and customizations** without sacrificing readability or ATS compatibility.
@@ -34,6 +54,7 @@ This template goes beyond aesthetics to ensure that:
 ## How the Chosen Packages Address Common Resume Pitfalls
 
 Other LaTeX resume templates might look good at first glance but often fall short when it comes to:
+
 - **Text Extraction:** Without proper Unicode mapping, ATS systems might not read your text correctly. This template ensures robust text extraction with `pdfgentounicode` and `glyphtounicode`.
 - **Encoding Issues:** Special characters can break ATS parsing if UTF-8 encoding is not used consistently. This template employs `inputenc` and other encoding-focused packages to prevent such issues.
 - **Non-Standard Fonts or Symbols:** Using non-standard fonts can make your resume unreadable by some ATS software. This template uses the standard `lmodern` font to maintain compatibility.
@@ -43,9 +64,11 @@ Other LaTeX resume templates might look good at first glance but often fall shor
 To set up the resume template:
 
 1. **Clone or Download the Repository:**
+
    ```bash
    git clone https://github.com/yourusername/ats-latex-resume.git
    ```
+
 2. **Edit the `resume_template.tex` File:**
    - Update the contact info, experience, skills and other sections with your personal information.
    - Add or rearrange sections based on your background.
@@ -64,13 +87,6 @@ Follow these steps to use the template with Overleaf:
 2. Create a new project and upload the `resume_template.tex` file.
 3. Edit the content directly in Overleaf and click “**Recompile**” to see the PDF update.
 4. Once satisfied, download the PDF.
-
-## Best Practices for ATS Optimization
-
-- **Stick to Standard Fonts and Layouts:** This template uses `lmodern` and basic formatting to ensure readability.
-- **Quantify Achievements:** Use specific numbers or metrics when describing work experience (e.g., "improved API response time by 25%").
-- **Avoid Uncommon Symbols or Graphics:** Keep the formatting simple to prevent ATS parsing issues.
-- **Use Relevant Keywords:** Tailor the resume with job-related keywords to improve your chances of passing ATS filters.
 
 ## Customization Tips
 
@@ -99,4 +115,4 @@ This template is licensed under the [MIT License](LICENSE), which allows you to 
 
 ## About This Template
 
-This template design was, is being iterated by a number of LaTeX resume resources available online, to balance aesthetics and ATS compliance. 
+This template design was, is being iterated by a number of LaTeX resume resources available online, to balance aesthetics and ATS compliance.
