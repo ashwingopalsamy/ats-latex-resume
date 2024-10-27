@@ -65,7 +65,7 @@ To set up the resume template:
 1. **Clone or Download the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/ats-latex-resume.git
+   git clone https://github.com/ashwingopalsamy/ats-latex-resume.git
    ```
 
 2. **Edit the `resume_template.tex` File:**
