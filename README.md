@@ -60,8 +60,8 @@ To set up the resume template:
 
 Follow these steps to use the template with Overleaf:
 
-1. Go to **[Overleaf**](https://www.overleaf.com/).
-2. Create a new project and upload the `**resume_template.tex**` file.
+1. Go to [**Overleaf**](https://www.overleaf.com/).
+2. Create a new project and upload the `resume_template.tex` file.
 3. Edit the content directly in Overleaf and click “**Recompile**” to see the PDF update.
 4. Once satisfied, download the PDF.
 
